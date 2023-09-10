@@ -1,0 +1,66 @@
+/* BlogCard.css */
+.blog-card {
+    margin: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    position: relative; /* Add this to make .card-overlay position relative to .blog-card */
+  }
+  
+  .card-image {
+    width: 100%;
+    padding-top: 60%; /* Aspect ratio for the image */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease; /* Transition for the blur effect */
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-title,
+  .card-description {
+    text-align: center;
+    margin: 0;
+    max-width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute; /* Position title and description absolutely */
+  }
+  
+  .card-title {
+    top: 20px; /* Adjust top position as needed */
+    font-size: 20px; /* Customize title font size */
+    font-weight: bold;
+  }
+  
+  .card-description {
+    top: 50px; /* Adjust top position as needed */
+    font-size: 14px; /* Customize description font size */
+  }
+  
+  .blog-card:hover .card-image {
+    filter: blur(2px); /* Apply blur on hover only to the background image */
+  }
+  
+  .blog-card:hover .card-overlay {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
