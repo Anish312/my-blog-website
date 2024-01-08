@@ -1,0 +1,26 @@
+.aboutBlog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-family: "Montserrat", sans-serif;
+
+ padding: 50px 0 70px 0;
+ border-bottom: 1px solid rgb(95, 95, 95);
+}
+.aboutBlog-main{
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.aboutBlog-head{
+  font-size: 29px;
+}
+.aboutBlog-line{
+    width: 120px;
+    position: absolute;
+   margin-left: 280px;
+   margin-bottom: 15px;
+}

@@ -1,22 +1,26 @@
 .navbar {
     position: fixed;
     left: 0;
-    padding: 0 10px ;
+    padding: 5px 10px ;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7); 
-    z-index: 1000;
+    /* background-color: rgba(255, 255, 255, 0.7);  */
+        background-color: white; 
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1px 1.6px;    z-index: 1000;
     display: flex;
+    
 }
 .navbar-logo {
-    width: 55px;
+    width: 60px;
 }
 .navbar-ul{
     display: flex;
     list-style: none;
      margin-left: 20px; 
 }
-.navbar-li{
- margin-left: 20px;
-  
+.navbar-li{   
+     font-family: Futara;
+ margin-left: 45px;
+  text-decoration: none;
+  color: black;
 }

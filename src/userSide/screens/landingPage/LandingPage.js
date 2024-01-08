@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './LandingPage.css';
 import BlogsSection from '../../components/blogsSection/BlogsSection';
+import AboutBlog from '../../components/aboutBlog/AboutBlog';
+import LandingCategory from '../../components/landingCategory/LandingCategory';
+import RecentPosts from '../../components/recentPosts/RecentPosts';
+import AllBlogs from '../../../adminPanel/components/allBlogs/AllBlogs';
 
 function LandingPage() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -47,14 +51,20 @@ function LandingPage() {
     <div className="landingPage">
       <div className="sample-header">
         <div className="sample-header-section">
-          <h1>Scroll down to see the parallax effect</h1>
-          <h2>Background landscape scrolls with its own depth</h2>
+          <h1>Welcome to My Blog Website</h1>
+          <h2>Explore all about different languages and frameworks </h2>
         </div>
+        
       </div>
       <div className="sample-section-wrap">
         <div className="sample-section">
           {/* Render your BlogsSection component or content here */}
-       <BlogsSection />
+          <AboutBlog/> 
+          <AllBlogs/>      
+           {/* <LandingCategory /> */}
+               <RecentPosts />
+
+   
         </div>
       </div>
     </div>

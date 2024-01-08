@@ -2,15 +2,13 @@
 
   .sample-header {
     position: fixed;
-    left: 0;
-    top: 0;
-    margin-top: 59px;
-    width: 100%;
-    background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
-    background-position: center;
-    background-size: cover;
-
-    background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   }
   .sample-header::before {
     content: "";
@@ -19,7 +17,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: MidnightBlue;
     opacity: 0.3;
   }
   .sample-header-section {
@@ -47,7 +44,7 @@
 
  
   width: 100%;
-    padding: 40px;
+ 
   }
   
   

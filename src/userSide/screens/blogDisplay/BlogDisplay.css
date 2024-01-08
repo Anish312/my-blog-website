@@ -1,0 +1,30 @@
+
+
+.blogDisplay{
+  margin-top: 100px;
+    display: flex;
+
+flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+.blogDisplay-container {
+    width: 65%;
+}
+.blogDisplay-title{
+
+}
+.blogDisplay-body{
+ 
+  line-height: 29px;
+  font-size: 20px;
+}
+.blogDisplay-line{
+  width: 120px;
+  position: absolute;
+ margin-left: 280px;
+margin-top: -50px;
+}

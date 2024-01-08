@@ -1,0 +1,119 @@
+.landingCategory-main{
+height: 980px;
+border-bottom: 1px solid rgb(176, 176, 176);
+background: #F0F0F0;
+display: flex;
+padding-bottom: 50px;
+padding-top: 20px;
+justify-content: space-between;
+}
+.landingCategory-head{
+ margin-bottom: 70px;
+ padding-top: 10px;
+  
+}
+.landingCategory-line1{
+    width: 120px;
+    position: absolute;
+   margin-left: 200px;
+margin-top: -45px;
+}
+.landingCategory-line{
+    width: 1px ;
+
+background-color: rgb(202, 202, 202);
+margin: 70px 0;
+}
+.landingCategory-container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+
+}
+.landingCategory-left {
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.landingCategory-left-box{
+    padding-bottom: 15px;
+    width: 662px;
+height: 501.14px;
+flex-shrink: 0;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background: #EADBC8;
+
+color: rgb(13, 13, 13);
+}
+
+.landingCategory-left-image-container{
+    background: #EADBC8;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.landingCategory-left-image{
+   width: 95%;
+ color: rgb(2, 2, 2);
+   height: 350px;
+}
+.landingCategory-left-box-details{
+    padding: 0px 20px;
+}
+
+.landingCategory-left-box-details-line{
+  width: 100px;
+  background-color: black;
+  height: 1px;
+  margin-top: -10px;
+}
+.landingCategory-left-box-details-p{
+    width: 80%;
+    color: rgba(0, 0, 0, 0.79);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.landingCategory-right {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.landingCategory-right-box{
+    width: 362px;
+height: max-content;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background-color: rgb(255, 255, 255);
+}
+.landingCategory-right-image-container{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.landingCategory-right-image{
+    padding-top: 7px;
+   width: 97%;
+   height: 270px;
+}
+.landingCategory-right-box-details{
+    padding: 0px 20px;
+}
+
+.landingCategory-right-box-details-line{
+  width: 100px;
+  background-color: black;
+  height: 1px;
+}
+.landingCategory-right-box-details-p{
+    width: 80%;
+    color: rgba(0, 0, 0, 0.79);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
