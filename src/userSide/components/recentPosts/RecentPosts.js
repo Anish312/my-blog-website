@@ -5,6 +5,7 @@ import "./RecentPosts.scss"
 import { Link } from "react-router-dom";
 import {fb} from '../../../firebase'
 import {             FaArrowRight ,FaArrowLeft } from 'react-icons/fa';
+import useAnalyticsEventTracker from '../../../event/useAnalyticsEventTracker'
 
 const db = fb.firestore()
 const Blogs = db.collection('blogs');
@@ -17,6 +18,7 @@ const Blogs = db.collection('blogs');
  
     const [rightButtonCount, setRightButtonCount] = useState(0);
     const [leftButtonCount, setLeftButtonCount] = useState(10);
+    const gaEventTracker = useAnalyticsEventTracker('Contact us');
 
     useEffect(() => {
         // Subscribe to query with onSnapshot
@@ -57,10 +59,11 @@ const Blogs = db.collection('blogs');
           return description; // If there are fewer than 10 words, display the full description
         }
       }
-
+      // const email = 'anishgehlot25@gmail.com';
+        // window.location.href = `mailto:${email}`;
       const handleClick = () => {
-        const email = 'anishgehlot25@gmail.com';
-        window.location.href = `mailto:${email}`;
+        gaEventTracker('call')
+  
       };
     return (
         <div className='recentPosts'>
@@ -72,7 +75,7 @@ const Blogs = db.collection('blogs');
             </div>
             <div className='recentPosts-head-right-bottom'>
             <div class="flex justify-center items-center vh-100">
-   <a onClick={handleClick} target="_blank">
+   <a onClick={()=>gaEventTracker('call')}target="_blank">
       <div class="button relative">
          <div class="element">
             <p>Contact Us &nbsp; <FaArrowRight/></p>

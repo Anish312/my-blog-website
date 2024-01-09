@@ -11,8 +11,12 @@ import Bloglist from './adminPanel/screens/blogList/BlogList';
 import CreateBlog from './adminPanel/screens/createBlog/CreateBlog';
 import BlogDisplay from './userSide/screens/blogDisplay/BlogDisplay';
 import RecentPosts from './userSide/components/recentPosts/RecentPosts';
+import ReactGA from 'react-ga';
 
 function App() {
+  
+  const TRACKING_ID = "G-YLYG08MPL1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
   return (
     
     
