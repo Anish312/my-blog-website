@@ -12,11 +12,22 @@ import CreateBlog from './adminPanel/screens/createBlog/CreateBlog';
 import BlogDisplay from './userSide/screens/blogDisplay/BlogDisplay';
 import RecentPosts from './userSide/components/recentPosts/RecentPosts';
 import ReactGA from 'react-ga';
-
+import TagManager from 'react-gtm-module'
 function App() {
   
   const TRACKING_ID = "G-C9VBKCJKP5"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
+
+
+const tagManagerArgs = {
+  gtmId: 'GTM-568W7C6F'
+}
+TagManager.initialize(tagManagerArgs)
+
+
+window.dataLayer.push({
+  event: 'pageview'
+});
   return (
     
     

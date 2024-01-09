@@ -62,7 +62,12 @@ function AllBlogs() {
       setCurrentPage(currentPage - 1);
     }
   };
-
+  window.dataLayer.push({
+    event: 'all_blogs',
+    eventProps: {
+        blogs: blogslist
+    }
+  });
   return (
     <div className="allBlogs">
       <div className="allBlogs-head">
