@@ -11,6 +11,8 @@ const Blogs = db.collection('blogs');
 function AllBlogs() {
   const [blogslist, setBlogsList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [allCategory, setAllCategory] = useState([]);
+ 
   const blogsPerPage = 8;
 
   useEffect(() => {
@@ -22,7 +24,16 @@ function AllBlogs() {
         id: doc.id,
       }));
       // Update state
-      setBlogsList(data);
+      setBlogsList(data); 
+      const categories = data.reduce((uniqueCategories, blog) => {
+        if (!uniqueCategories.includes(blog.Category)) {
+          return [...uniqueCategories, blog.Category];
+        }
+        return uniqueCategories;
+      }, []);
+  
+      // Set unique categories
+      setAllCategory(categories);
     });
 
     // Detach listener
@@ -62,12 +73,16 @@ function AllBlogs() {
       setCurrentPage(currentPage - 1);
     }
   };
+
   window.dataLayer.push({
     event: 'all_blogs',
     eventProps: {
-        blogs: blogslist
+      category: allCategory,
+
+        // blogs: blogslist
     }
   });
+  console.log(allCategory)
   return (
     <div className="allBlogs">
       <div className="allBlogs-head">
