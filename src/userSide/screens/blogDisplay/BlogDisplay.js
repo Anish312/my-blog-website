@@ -19,7 +19,18 @@ function BlogDisplay() {
           const data = snapshot.data();
           setBlogs(data);
         });
-      }, [id]);
+      }, [id])
+
+ 
+
+      window.dataLayer.push({
+        event: 'viewed_blogs',
+        eventProps: {
+         viewed_blogs: blogs
+    
+            // blogs: blogslist
+        }
+      });
   return (
     <>
       <div className="blogDisplay">
