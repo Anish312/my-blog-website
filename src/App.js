@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from './userSide/components/navbar/Navbar';
 import Footer from './userSide/components/footer/Footer';
@@ -16,7 +16,11 @@ import TagManager from 'react-gtm-module'
 function App() {
   
   const TRACKING_ID = "G-C9VBKCJKP5"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize(TRACKING_ID);
+
+
+
+
 
 
 const tagManagerArgs = {

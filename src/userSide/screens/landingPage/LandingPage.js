@@ -8,7 +8,7 @@ import AllBlogs from '../../../adminPanel/components/allBlogs/AllBlogs';
 
 function LandingPage() {
   const [headerHeight, setHeaderHeight] = useState(0);
-
+  const [accuracy , setAccuracy] = useState(2);
   useEffect(() => {
     // Define the parallax effect function
     function parallaxHeight() {
@@ -47,11 +47,19 @@ function LandingPage() {
     };
   }, []);
 
+  useEffect(() => {
+
+    fetch("/api/ml").then(res => res.json()).then(data => { setAccuracy(data.accuracy) });
+    
+  }, []);
   return (
     <div className="landingPage">
       <div className="sample-header">
         <div className="sample-header-section">
           <h1>Welcome to My Blog Website</h1>
+          <div>
+            {accuracy}
+          </div>
           <h2>Explore all about different languages and frameworks </h2>
         </div>
         

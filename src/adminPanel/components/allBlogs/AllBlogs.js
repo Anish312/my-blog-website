@@ -82,7 +82,6 @@ function AllBlogs() {
         // blogs: blogslist
     }
   });
-  console.log(allCategory)
   return (
     <div className="allBlogs">
       <div className="allBlogs-head">
