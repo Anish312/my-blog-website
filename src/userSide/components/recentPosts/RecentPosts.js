@@ -92,7 +92,7 @@ const Blogs = db.collection('blogs');
      
           <div className='recentPosts-main-boxes' style={{ transform: `translateX(-${scrollPosition}px)` }}>
             {blogslist.map((post, index) => (
-             <Link to={"/blog/"+post.id} style={{textDecoration:"none"}}>
+             <Link to={"/blog/"+post.id} style={{textDecoration:"none"}} id="recent-id">
               <div className='recentPost-box' key={index}>
                 <span>React js</span>
                 <h4 className='recentPosts-post-title'>{post.Title}</h4>         
